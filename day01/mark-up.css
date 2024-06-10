@@ -1,0 +1,126 @@
+body {
+    color: #222;
+}
+
+header {
+    display: flex;
+    border: 1px solid #222;
+
+    max-width: 1000px;
+    margin: 0 auto;
+
+    height: 100px;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 12px;
+}
+
+h1 {
+    background-color: yellow;
+    width: 200px;
+
+    font-size: 32px;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    background-color: antiquewhite;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-container {
+    display: flex;
+    background-color: orange;
+}
+
+.menu-container a {
+    display: block;
+    padding: 8px 16px;
+    color: #222;
+    text-decoration: none;
+}
+
+.menu-container:first-child {
+    background-color: yellow;
+}
+
+.wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    display: flex;
+
+    gap: 12px;
+
+    align-items: flex-start;
+    /* align-items: stretch;(기본값) */
+
+    margin-bottom: 12px;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+article {
+    border: 1px solid #222;
+    width: 640px;
+    padding: 16px;
+}
+
+.wrap h2 {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 4px;
+    margin-bottom: 8px;
+}
+
+article >h2 {
+    background-color: antiquewhite;
+}
+
+.wrap p {
+    line-height: 150%;
+}
+
+aside {
+    border: 1px solid #222;
+    padding: 16px;
+    /* height: fit-content; */
+    
+}
+
+.aside-inner-box {
+    background-color: gray;
+    margin-top: 12px;
+}
+
+.aside-inner-box > h3 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+footer {
+    max-width: 1000px;
+    border: 1px solid #222;
+    box-sizing: border-box;
+    margin: 0 auto;
+
+    text-align: center;
+    padding: 12px;
+
+    background-color: antiquewhite;
+}
