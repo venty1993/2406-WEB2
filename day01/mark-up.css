@@ -8,6 +8,10 @@ header {
     justify-content: space-between;
 
     margin: 0 auto;
+
+    box-sizing: border-box;
+
+    margin-bottom: 8px;
 }
 
 h1 {
@@ -49,4 +53,69 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center; */
+}
+
+
+.wrap {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+main {
+    /* flex-grow: 2; */
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+article {
+    padding: 16px;
+    border: 1px solid #222;
+}
+
+.wrap h2 {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 4px;
+    margin-bottom: 8px;
+}
+
+article > h2 {
+    background-color: pink;
+}
+
+.wrap p {
+    line-height: 150%;
+}
+
+aside {
+    width: 320px;
+    flex-shrink: 0;
+    padding: 16px;
+    border: 1px solid #222;
+}
+
+
+.aside-inner-box {
+    background-color: gray;
+    margin-top: 8px;
+}
+
+.aside-inner-box > h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+footer {
+    width: 1000px;
+    border: 1px solid #222;
+    background-color: pink;
+    margin: 0 auto;
+
+    text-align: center;
+    padding: 12px;
+    box-sizing: border-box;
 }
