@@ -45,13 +45,24 @@
             <h3>radio</h3>
             <!-- 제출 하는 라디오버튼 사용시 value 필수 -->
             <!-- name 값을 맞춰주면 하나의 그룹으로 묶여 한 버튼만 선택되게 바뀐다. -->
-            <input type="radio" name="test" id="" value="real-yes">매우그렇다
-            <input type="radio" name="test" id="" value="yes">그렇다
-            <input type="radio" name="test" id="" value="no">아니다
-            <input type="radio" name="test" id="" value="real-no">매우아니다
+            <input type="radio" name="test" id="real-yes-radio" value="real-yes">
+            <label for="real-yes-radio">
+                매우그렇다
+            </label>
+            <input type="radio" name="test" id="yes-radio" value="yes">
+            <label for="yes-radio">
+                그렇다
+            </label>
+            <input type="radio" name="test" id="no-radio" value="no">
+            <label for="no-radio">
+                아니다
+            </label>
+            <input type="radio" name="test" id="real-no-radio" value="real-no">
+            <label for="real-no-radio">
+                매우아니다
+            </label>
         </div>
         <input type="submit" value="제출">
-        
     </form>
 
 </body>

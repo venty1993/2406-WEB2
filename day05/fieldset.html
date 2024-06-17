@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+</head>
+<body>
+    <!-- form 내부의 input태그들을 구분해주는 용도로 사용한다. -->
+    <!-- 엄밀히 따지면 시맨틱태그에 포함되므로 잘 쓰면 좋다. -->
+    <fieldset>
+        <!-- legend 태그는 fieldset을 설명하는 태그. 무조건 세트다. -->
+        <legend>주소</legend>
+        <input type="text">
+    </fieldset>
+
+    <fieldset>
+        <legend>전화번호</legend>
+        <input type="tel">
+    </fieldset>
+
+    <!-- 물론 아래와 같이 만들어도 문제 없다. -->
+
+    <style>
+        .container {
+            border: 1px solid #222;
+            border-radius: 2px;
+            padding: 16px;
+        }
+    </style>
+
+
+    <div class="container">
+        <h3>주소</h3>
+        <input type="text">
+    </div>
+</body>
+</html>

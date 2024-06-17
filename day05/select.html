@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+</head>
+<body>
+    <form action="" method="get">
+        <h3>당신의 주식은 무엇인가요?</h3>
+        <!-- 멀티플 속성은... 굳이? -->
+        <select name="주식" id="" multiple>
+            <option value="rice">밥</option>
+            <option value="bread">빵</option>
+            <option value="noodle">면</option>
+            <option value="god">엔비디아</option>
+        </select>
+        <p>Ctrl + 클릭으로 다중 선택 가능합니다.</p>
+        <input type="submit" value="제출">
+        
+        <!-- 멀티플 쓸바에는.. -->
+
+        <div class="container">
+            <h3>당시니의 주식은 무엇인가요?</h3>
+            <div class="chk-container">
+                <div class="chkbox">
+                    <input type="checkbox">
+                    <label for="">밥</label>
+                </div>
+                <div class="chkbox">
+                    <input type="checkbox">
+                    <label for="">빵</label>
+                </div>
+                <div class="chkbox">
+                    <input type="checkbox">
+                    <label for="">면</label>
+                </div>
+                <div class="chkbox">
+                    <input type="checkbox">
+                    <label for="">엔비디아</label>
+                </div>
+            </div>
+        </div>
+
+        <button type="reset">초기화</button>
+        <button type="submit">
+            <!-- 여는태그와 닫는태그가 있어 마크업 가능!(중요) -->
+            제출
+        </button>
+    </form>
+
+        
+    <textarea name="" id="" rows="5" cols="5"></textarea>
+</body>
+</html>
