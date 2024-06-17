@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- form태그는 웹 서버에 정보를 전달하기 위해 사용한다. -->
+    <!-- 관공서에서 작성하는 문서를 생각하면 편하다. -->
+    <!-- action : 내가 문서를 제출할 창구가 어딘가? (경로 입력) -->
+    <!-- method :
+          - get : 내가 전달할 정보를 노출시켜 공유를 용이하게 만들어주는 방식
+          - post : 내가 전달할 정보가 외부에 노출되면 안될때 보이지 않게 숨기는 방식
+    -->
+
+    <form action="" method="get">
+        <h2>get</h2>
+        <input type="text" name="검색어">
+        <input type="text" name="옵션">
+        <input type="submit" value="제출하기">
+    </form>
+
+    <form action="" method="post">
+        <h2>post</h2>
+        <input type="text" name="검색어">
+        <input type="text" name="옵션">
+        <input type="submit" value="제출하기">
+    </form>
+</body>
+</html>

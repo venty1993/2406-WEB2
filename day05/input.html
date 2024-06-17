@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        .input-box {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+
+        <!-- input은 form의 구성요소로 사용하는 태그이긴 하지만, form 없이 별도로 사용 가능 -->
+        <div class="input-box">
+            <h3>text</h3>
+            <input type="text">
+        </div>
+
+        <div class="input-box">
+            <h3>password</h3>
+            <input type="password" name="" id="">
+        </div>
+
+
+        <style>
+            .hide-chkbox {
+                display: none;
+            }
+        </style>
+        <div class="input-box">
+            <h3>checkbox</h3>
+            <!-- checked 속성으로 초기값 설정 가능 -->
+            <input type="checkbox" checked name="체크됐니" id="">
+            <!-- display : none 처리된 체크박스도 정상적으로 전달된다. -->
+            <input type="checkbox" name="숨겨진녀석" checked class="hide-chkbox">
+        </div>
+
+        <div class="input-box">
+            <h3>radio</h3>
+            <!-- 제출 하는 라디오버튼 사용시 value 필수 -->
+            <!-- name 값을 맞춰주면 하나의 그룹으로 묶여 한 버튼만 선택되게 바뀐다. -->
+            <input type="radio" name="test" id="" value="real-yes">매우그렇다
+            <input type="radio" name="test" id="" value="yes">그렇다
+            <input type="radio" name="test" id="" value="no">아니다
+            <input type="radio" name="test" id="" value="real-no">매우아니다
+        </div>
+        <input type="submit" value="제출">
+        
+    </form>
+
+</body>
+</html>
