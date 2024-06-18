@@ -20,6 +20,7 @@
         .static-box {
             /* 포지션의 기본값 */
             position: static;
+            background-color: cadetblue;
             /*
             정적, 고정 이란 뜻을 가지고있으며, 
             static 상태로는 이후에 나올 각종 position 속성들과
@@ -32,6 +33,7 @@
             top: 50px;
             /* 이 속성은 기존의 흐름을 따라 가지만 position의 영향을 받는다 */
             position: relative;
+            background-color: pink;
         }
 
         .absolute-box {
@@ -42,6 +44,11 @@
         .mini-box {
             width: 50px;
             height: 50px;
+        }
+
+        .big-box {
+            width: 150px;
+            height: 150px;
         }
     </style>
 </head>
@@ -69,6 +76,19 @@
     <!-- static은 무시되므로 역시 body를 기준으로 정렬되는것을 확인 할 수 있다. -->
     <div class="box static-box">static
         <div class="box mini-box absolute-box" >abs</div>
+    </div>
+
+    <div class="box static-box">static
+        <div class="box rel-box">rel
+            <div class="box mini-box absolute-box">abs</div>
+        </div>
+        
+    </div>
+
+    <div class="rel-box box big-box">rel-box
+        <div class="box absolute-box">absolute-p
+            <div class="box absolute-box mini-box">absolute-c</div>
+        </div>
     </div>
 </body>
 </html>
