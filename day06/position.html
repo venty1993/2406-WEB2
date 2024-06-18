@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            left: 40px;
+        }
+
+        .static-box {
+            /* 포지션의 기본값 */
+            position: static;
+            /*
+            정적, 고정 이란 뜻을 가지고있으며, 
+            static 상태로는 이후에 나올 각종 position 속성들과
+            전혀 상호작용 하지 못한다.
+            */
+        }
+
+        .rel-box {
+            /* 포지션과 관련있게 만들어주는 속성 */
+            top: 50px;
+            /* 이 속성은 기존의 흐름을 따라 가지만 position의 영향을 받는다 */
+            position: relative;
+        }
+
+        .absolute-box {
+            position: absolute;
+            top: 40px;
+        }
+
+        .mini-box {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box static-box">static</div>
+    <div class="box rel-box">relative</div>
+    <div class="box static-box">static</div>
+    <div class="box absolute-box">absolute</div>
+    <div class="box static-box">static</div>
+    <div class="box rel-box">relative
+        <div class="box mini-box absolute-box" >abs</div>
+    </div>
+
+    <div class="box static-box">static
+        <div class="box mini-box absolute-box" >abs</div>
+    </div>
+</body>
+</html>
