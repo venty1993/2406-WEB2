@@ -13,10 +13,12 @@
 
         .margin-section {
             height: 1000px;
+            background-color: pink;
         }
         .area {
             display: flex;
             gap: 16px;
+            /* align-items: center; */
         }
 
         .text-box {
@@ -30,15 +32,17 @@
         }
 
         .sticky-img {
-            position: sticky;
-            height: 100vh;
-            top: 0;
             object-fit: cover;
         }
 
         .area > figure {
             width: 50%;
             flex-shrink: 0;
+            height: 100vh;
+            position: sticky;
+            top: 0;
+            display: flex;
+            align-items: center;
         }
     </style>
 </head>
