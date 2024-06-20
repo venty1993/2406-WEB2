@@ -33,8 +33,51 @@
             background-color: #22222280;
         }
 
+        /* 
+
+        position 속성과 어떻게 다른가?
+
+        1. 중점
+         - position의 left 100%과 같은 값은
+           정렬될 개체에 지정하지만 중점은 컨테이너이다.
+           부모컨테이너의 오른쪽 끝을 기준으로 바깥쪽에 정렬된다.   
+        
+         - transform속성은 자신이 중심으로,
+           translateX(100%)는 자신의 x 크기만큼 오른쪽으로 이동한다.
+        */
         .trans {
-            transform: translate(100px, 100px);
+            /* 
+            translate : 이동시키는 속성 
+            translate(x이동거리,y이동거리) - x,y축 이동
+            translateX(x이동거리) - x
+            translateY(y이동거리) - y
+            translateZ(z이동거리) - y
+            translate3D(x이동거리,y이동거리,z이동거리) - 3d 이동
+            */
+            
+            /* transform: translate(100%, 100%); */
+
+
+            /* 
+            scale : 크기를 변화시키는 속성
+
+            scale(비율) : 1:1비율로 변형
+            scale(X비율,Y비율) : 자유변형
+            scaleX(비율) : X축 비율 변형
+            scaleY(비율) : Y축 비율 변형
+            scaleY(비율) : Z축 비율 변형
+            scale3d(비율,비율,비율) : 3d 비율 변형
+            */
+
+            /* transform: scale(2); */
+            
+            /* width: 400px;
+            height: 400px; */
+
+            /* 
+            wh_vs_scale.html를 참고해 width,height를 직접 바꾸는것과
+            scale을 이용해 크기를 바꾸는것의 차이를 완벽히 구분해보자
+            */
         }
     </style>
 </head>
