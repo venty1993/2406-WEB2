@@ -44,6 +44,7 @@
         
          - transform속성은 자신이 중심으로,
            translateX(100%)는 자신의 x 크기만큼 오른쪽으로 이동한다.
+           
         */
         .trans {
             /* 
@@ -75,9 +76,42 @@
             height: 400px; */
 
             /* 
-            wh_vs_scale.html를 참고해 width,height를 직접 바꾸는것과
+            wh_vs_scale.html을 참고해 width,height를 직접 바꾸는것과
             scale을 이용해 크기를 바꾸는것의 차이를 완벽히 구분해보자
             */
+
+            /* 
+            rotate : 회전
+            rotate(각도)
+            ..
+            ..
+            ..
+            (x y z, 3d등등..) 
+             */
+
+             /* transform: rotate(45deg); */
+
+             /* skew : 기울임 속성 */
+             /* transform: skewX(45deg) skewY(45deg); */
+
+
+
+            /* 트랜스폼이 어디를 기준으로 작동될것인가? */
+            /* 기본값 : center center */
+            transform-origin: 300px 300px;
+            transform: rotate(90deg);
+
+            animation: rotate 2s linear infinite  ;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+            
         }
     </style>
 </head>
