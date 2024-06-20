@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #222;
+            background-color: pink;
+
+            font-size: 24px;
+            font-weight: bold;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            position: absolute;
+            opacity: 0.8;
+        }
+
+        .origin {
+            background-color: #22222280;
+        }
+
+        .trans {
+            transform: translate(100px, 100px);
+        }
+    </style>
+</head>
+<body>
+    <div class="box origin">
+        원래 위치
+    </div>
+    <div class="box trans">
+        BOX
+    </div>
+</body>
+</html>
