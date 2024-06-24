@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        .arm {
+            width: 200px;
+            height: 40px;
+            background-color: gray;
+            animation: move 4s infinite;
+        }
+
+        .upper-arm{
+            margin: 200px;
+            transform-origin: left ;
+            position: relative;
+            /* transform: rotate(45deg); */
+
+        }
+        .lower-arm {
+            position: absolute;
+            left: 100%;
+            /* transform: rotate(45deg); */
+            transform-origin: left ;
+
+        }
+
+        @keyframes move {
+            from {
+            }
+            
+            50% {
+                transform: rotate(90deg);
+            }
+
+            to {
+
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="upper-arm arm">
+        <div class="lower-arm arm"></div>
+        </div>
+</body>
+</html>

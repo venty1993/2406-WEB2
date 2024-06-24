@@ -14,8 +14,20 @@
             position: relative;
             transform-style: preserve-3d;
 
-            transform: rotateX(45deg) rotateY(45deg);
+            /* transform: rotateX(45deg) rotateY(45deg); */
+            animation: roll 3s linear infinite;
         }
+
+        @keyframes roll {
+            from {
+                
+            }
+
+            to {
+                transform: rotateX(360deg) rotateY(720deg) rotateZ(360deg);
+            }
+        }
+
         .face {
             width: 100%;
             height: 100%;
@@ -29,6 +41,7 @@
             flex-wrap: wrap;
             column-gap: 31px;
             row-gap: 10px;
+            border-radius: 10px;
 
             background-color: white;
 
