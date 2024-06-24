@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        .dice {
+            width: 100px;
+            height: 100px;
+        }
+        .face {
+            width: 100%;
+            height: 100%;
+            padding: 24px;
+            box-sizing: border-box;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            column-gap: 31px;
+            row-gap: 11px;
+
+            position: relative;
+        }
+
+        .face-box {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .eye {
+            width: 10px;
+            height: 10px;
+            background-color: #222;
+            border-radius: 50%;
+        }
+
+        .abs-eye {
+            position: absolute;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .top {
+            top: 0;
+        }
+
+        .right {
+            right: 0;
+        }
+
+        .bottom {
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="dice">
+        <div class="face">
+            <div class="eye"></div>
+        </div>
+        <div class="face">
+            <div class="eye"></div>
+            <div class="eye"></div>
+        </div>
+        <div class="face">
+            <div class="eye"></div>
+            <div class="eye"></div>
+            <div class="eye"></div>
+        </div>
+        <div class="face">
+            <div class="face-box">
+                <div class="eye left top abs-eye"></div>
+                <div class="eye left bottom abs-eye"></div>
+                <div class="eye right top abs-eye"></div>
+                <div class="eye right bottom abs-eye"></div>
+            </div>
+        </div>
+        <div class="face">
+            <div class="eye"></div>
+            <div class="eye"></div>
+            <div class="eye"></div>
+            <div class="eye"></div>
+            <div class="eye"></div>
+        </div>
+        <div class="face">
+            <div class="eye"></div>
+            <div class="eye"></div>
+            <div class="eye"></div>
+            <div class="eye"></div>
+            <div class="eye"></div>
+            <div class="eye"></div>
+        </div>
+    </div>
+</body>
+</html>
