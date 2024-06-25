@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            트랜지션은 개체의 속성이 변화할때 작동한다.
+            변화하는 값 사이에 중간지점이 있어야만 작동하며(Ex. 0->1, 50px -> 500px 등)
+            그렇지 않은경우는 작동하지 않는다(Ex. none -> block, auto -> 500px 등)
+
+            트랜지션 작동은 일반적으로 :hover, 클래스 삽입등 다양한 방법을 사용하지만
+            요점은 "개체의 속성이 변화" 할때 작동하는것이다.
+            여러가지 방법으로 속성을 변화시키는것!
+        */
+
+        .box {
+            margin: 10px;
+            width: 200px;
+            height: 200px;
+            background-color: cadetblue;
+
+            /* transition: 0.5s; */
+
+            /* 트랜지션을 어느 속성에 적용할것인지 직접 설정 (기본값 all)*/
+            transition-property: width,height;
+
+            /* 트랜지션 지속시간 */
+            transition-duration: 0.5s,0.5s;
+            /* 트랜지션을 재생할 가속도 함수(기본값은 ease) */
+            transition-timing-function: ease,ease;
+            /* 트랜지션 재생까지 지연시킬 시간 */
+            transition-delay: 0s,0.5s;
+
+            transition: 0.5s;
+
+        }
+
+        .box.active {
+            background-color: red;
+        }
+
+        .lin {
+            transition-timing-function: linear;
+        }
+
+        .eas {
+            transition-timing-function: ease;
+        }
+
+        .container:hover>.box {
+            width: 400px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box lin"></div>
+        <div class="box lin"></div>
+        <div class="box lin"></div>
+        <div class="box eas"></div>
+        <div class="box eas"></div>
+        <div class="box eas"></div>
+    </div>
+
+    <script>
+        const boxs = document.getElementsByClassName('box');
+
+        for (let index = 0; index < boxs.length; index++) {
+            const element = boxs[index];
+            element.addEventListener('click',()=>{
+                element.classList.toggle('active');
+            })
+            
+        }
+        boxs
+    </script>
+</body>
+</html>
