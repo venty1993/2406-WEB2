@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        body {
+            background-color: #222;
+        }
+
+        .pack {
+            width: 100px;
+            height: 100px;
+            
+            
+        }
+        .m {
+            display: block;
+            width: 100px;
+            height: 50px;
+            background-color: white;
+        }
+
+        .top-m {
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            transform-origin: bottom;
+            animation: bite-up infinite alternate linear 0.2s;
+
+        }
+
+        .bot-m {
+            transform-origin: top;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            animation: bite-down infinite alternate linear 0.2s;
+        }
+
+        @keyframes bite-up {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(30deg);
+            }
+            
+        }
+        @keyframes bite-down {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(-30deg);
+            }
+            
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="pack">
+        <span class="m top-m"></span>
+        <span class="m bot-m"></span>
+    </div>
+
+    <script>
+
+    </script>
+</body>
+</html>
