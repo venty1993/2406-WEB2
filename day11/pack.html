@@ -10,11 +10,14 @@
             background-color: #222;
         }
 
-        .pack {
+        .pack-man {
+            transition: 0.2s;
             width: 100px;
             height: 100px;
-            
-            
+        }
+
+        .pack-rotate {
+            transition: 0.2s;
         }
         .m {
             display: block;
@@ -61,13 +64,59 @@
     </style>
 </head>
 <body>
-    <div class="pack">
-        <span class="m top-m"></span>
-        <span class="m bot-m"></span>
+    <div class="pack-man">    
+        <div class="pack-rotate">
+            <span class="m top-m"></span>
+            <span class="m bot-m"></span>
+        </div>
     </div>
 
     <script>
 
+        const packMan = document.querySelector('.pack-man');
+        const packPos = {
+            x:0,
+            y:0
+        }
+        let packVector = 0;
+        let packPreVector = 0;
+
+        window.addEventListener('keydown', (e) => {
+            switch(e.key) {
+                case 'ArrowRight' :
+                    packPos.x += 100
+                    packVector=180;
+                    break;
+                case 'ArrowLeft' : 
+                    packPos.x -= 100
+                    packVector=0;
+                    break;
+                case 'ArrowUp' : 
+                    packPos.y -= 100
+                    packVector=90;
+                    break;
+                case 'ArrowDown' : 
+                    packPos.y += 100
+                    packVector=270;
+                    break;
+
+                    
+                }
+                if(packPreVector===270 && packVector ===0) {
+                    packMan.children[0].style.transition = '0s'
+                    packMan.children[0].style.transform = `rotate(${-90}deg)`
+                }else if(packPreVector === 0 && packVector===270) {
+                    packMan.children[0].style.transition = '0s'
+                    packMan.children[0].style.transform = `rotate(${360}deg)`
+                }
+                setTimeout(() => {
+                    packMan.children[0].style.transition = '0.2s'
+                    packMan.style.transform = `translate(${packPos.x}px,${packPos.y}px)`
+                    packMan.children[0].style.transform = `rotate(${packVector}deg)`
+                    packPreVector = packVector;
+                }, 1);
+            
+        })
     </script>
 </body>
 </html>
