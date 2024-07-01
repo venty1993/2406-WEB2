@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        .container{
+            width: 400px;
+            height: 400px;
+            background-color: gray;
+            position: relative;
+            margin: 80px;
+        }
+
+        .animation-container {
+            position: absolute;
+            /* background-color: red; */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        .h-letter {
+            width: 150px;
+            height: 250px;
+            background-color: white;
+        }
+
+        .width1{
+            width: 50px;
+        }
+
+        .height1{
+            height: 50px;
+        }
+
+        .height5{
+            height: 250px;
+        }
+
+        .top {
+            top: 0;
+        }
+
+        .center-v {
+            top: 40%
+        }
+
+        .bottom {
+            bottom: 0;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .center-h {
+            left: calc(100% / 3);
+        }
+
+        .right {
+            right: 0;
+        }
+
+        .for-bottom {
+            transform-origin: top left;
+            transform: scaleY(0);
+        }
+
+        .for-top {
+            transform-origin: bottom left;
+            transform: scaleY(0);
+        }
+
+        .for-right {
+            transform-origin: top left;
+            transform: scaleX(0);
+        }
+
+        .for-left {
+            transform-origin: right top;
+            transform: scaleX(0);
+        }
+
+        .stroke1 {
+            animation: stroke1 5s alternate infinite;
+
+        }
+
+        .stroke2 {
+            animation: stroke2 5s alternate infinite;
+        }
+
+        .stroke3 {
+            animation: stroke3 5s alternate infinite;
+        }
+
+        .stroke {
+            background-color: orangered;
+            position: absolute;
+            animation-fill-mode: both;
+        }
+
+        @keyframes stroke1 {
+            0% {
+                
+            }  
+            20% {
+                transform: none;
+            }
+            100% {
+                transform: none;
+            }
+        }
+
+        @keyframes stroke2 {
+            20% {
+               transform: scaleX(0);
+            }
+
+            40% {
+                transform: none;
+            }
+            100% {
+                transform: none;
+            }
+        }
+
+        @keyframes stroke3 {
+            40%{
+                transform: scaleY(0);
+            }
+            60%{
+                transform: none;
+            }
+            100%{
+                transform: none;
+            }
+
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="animation-container h-letter">
+            <div class="stroke stroke1 width1 height5 left top for-bottom"></div>
+            <div class="stroke stroke2 width1 height1 center-v center-h for-right"></div>
+            <div class="stroke stroke3 width1 height5 right top for-bottom"></div>
+        </div>
+    </div>
+
+   
+</body>
+</html>

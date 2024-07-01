@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        .container{
+            width: 400px;
+            height: 400px;
+            background-color: gray;
+            position: relative;
+            margin: 80px;
+        }
+
+        .animation-container {
+            position: absolute;
+            /* background-color: red; */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 32px;
+            height: 80px;
+            border: 1px solid black;
+        }
+
+        .mouse {
+            width: 32px;
+            height: 56px;
+            border: 2px solid white;
+            border-radius: 16px;
+            box-sizing: border-box;
+            position: absolute;
+            animation: mouse-animation 2s infinite;
+        }
+
+        .wheel {
+            width: 8px;
+            height: 8px;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            top: 25%;
+            transform: translate(-50%, -50%);
+            animation: wheel-animation infinite 2s;
+        }
+
+        @keyframes mouse-animation {
+            0% {
+                opacity: 0;
+                transform: scale(0);
+            }
+            
+            33% {
+                top: 0;
+                opacity: 1;
+                transform: scale(1);
+                
+            }
+
+            66% {
+                top: 24px;
+                opacity: 1;
+            }
+            
+            100% {
+                top: 24px;
+                opacity: 0;
+            }
+        }
+
+        @keyframes wheel-animation {
+            33% {
+                top :25%;
+            }
+            66% {
+                top: 75%;
+            }
+            100% {
+                top: 75%;
+            }
+            
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <div class="container">
+        <div class="animation-container">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
