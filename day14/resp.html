@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 반응형 제작시에는 PC퍼스트 or 모바일퍼스트 선택해야 한다. */
+        .반응형박스 {
+            width: 100%;
+            height: 50vh;            
+            background-color: cadetblue;
+        }
+
+        @media screen and (max-width:800px) and (min-width:750px){
+            .반응형박스 {
+                background-color: red;
+            }
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="반응형박스"></div>
+    <!-- 
+    1366~ PC
+    768~1365 Tablet
+    ~767 Mobile
+
+
+    PC퍼스트
+
+        기본작성 : pc
+
+        @media screen and (max-widht:1365) {
+            태블릿
+        }
+
+        @media screen and (max-width:767) {
+            모바일
+        } 
+            
+    
+    모바일퍼스트
+
+        기본작성 : mobile
+
+        @media screen and (min-width:768) {
+            태블릿
+        }
+
+        @media screen and (min-width:1366) {
+            PC
+        }
+
+
+        
+        
+    -->
+</body>
+</html>

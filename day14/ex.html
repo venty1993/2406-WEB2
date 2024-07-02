@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        #my-section {
+            padding: 0 32px;
+        }
+
+        .section-container {
+            /* max-width와 width는 같은속성처럼 보이지만 별개의 속성 */
+            /* 현재 width는 기본값인 100% */
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .contents {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 16px;
+        }
+
+        figure {
+            width: 100%;
+            aspect-ratio: 1;
+            background-color: gray;
+        }
+
+        .contents-explane {
+            width: 100%;
+        }
+
+        .contents-explane > h2 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #222;
+            margin-bottom: 8px;
+        }
+        
+        .contents-explane > .sub-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #444;
+            margin-bottom: 16px;
+        }
+
+        .contents-explane > .content-text {
+            color: #666;
+        }
+
+        @media screen and (max-width:767px) {
+            #my-section {
+                padding: 0 20px;
+            }
+
+            .contents {
+                flex-direction: column;
+                margin-bottom: 48px;
+            }
+        }
+
+        /* @media screen and (max-width:1344px) {
+            .section-container {
+                width: 100%;
+            }
+            
+        } */
+    </style>
+</head>
+<body>
+    <section id="my-section">
+        <div class="section-container">
+            <div class="contents">
+                <figure class="my-img"></figure>
+                <div class="contents-explane">
+                    <h2>제목 영역</h2>
+                    <p class="sub-title">부제목 영역</p>
+                    <p class="content-text">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque modi, soluta, consectetur reiciendis ab deleniti voluptas eius repellat, perferendis quasi commodi sit. In necessitatibus sequi tempore ipsum laudantium neque recusandae?
+                    </p>
+                </div>
+            </div>
+            <div class="contents">
+                <figure class="my-img"></figure>
+                <div class="contents-explane">
+                    <h2>제목 영역</h2>
+                    <p class="sub-title">부제목 영역</p>
+                    <p class="content-text">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque modi, soluta, consectetur reiciendis ab deleniti voluptas eius repellat, perferendis quasi commodi sit. In necessitatibus sequi tempore ipsum laudantium neque recusandae?
+                    </p>
+                </div>
+            </div>
+            <div class="contents">
+                <figure class="my-img"></figure>
+                <div class="contents-explane">
+                    <h2>제목 영역</h2>
+                    <p class="sub-title">부제목 영역</p>
+                    <p class="content-text">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque modi, soluta, consectetur reiciendis ab deleniti voluptas eius repellat, perferendis quasi commodi sit. In necessitatibus sequi tempore ipsum laudantium neque recusandae?
+                    </p>
+                </div>
+            </div>
+            <div class="contents">
+                <figure class="my-img"></figure>
+                <div class="contents-explane">
+                    <h2>제목 영역</h2>
+                    <p class="sub-title">부제목 영역</p>
+                    <p class="content-text">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque modi, soluta, consectetur reiciendis ab deleniti voluptas eius repellat, perferendis quasi commodi sit. In necessitatibus sequi tempore ipsum laudantium neque recusandae?
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 섹션에는 padding 0 32px 기본으로 넣어주고, 모바일에서 변경 -->
+    <section>
+        <!-- 섹션 컨테이너에는 max-width: 컨테이너사이즈px로 구조 잡기 -->
+        <div class="section-container">
+            <!-- 내용작성 -->
+        </div>
+    </section>
+</body>
+</html>
