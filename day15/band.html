@@ -6,6 +6,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="../reset.css">
     <style>
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
         .logo-spr {
             display: block;
             background: url('imgs/spr_intro.png') no-repeat 0 -98px;
@@ -34,10 +40,13 @@
                 </span>
             </a>
             <div class="header-buttons">
-                <select name="" id="">
-                    <option value="">한국어</option>
-                    <option value="">English</option>
+             
+
+                <select id="">
+                    <option>한국어</option>
+                    <option>English</option>
                 </select>
+     
                 <a href="#">회원가입</a>
                 <a href="#" class="band-button">로그인</a>
             </div>
@@ -68,14 +77,78 @@
         </div>
     </section>
 
+    <style>
+        body > section {
+            padding: 0 32px;
+        }
+
+        .section-container {
+            width: 1000px;
+            margin: 0 auto;
+
+
+            /* border: 1px solid #222; */
+        }
+
+        #meeting-explane {
+            background-color: rgb(244, 244, 244);
+            padding: 80px 32px;
+          
+        }
+
+        #meeting-explane > .section-container {
+            display: flex;
+            gap: 40px;
+        }
+
+        .explane-content > figure {
+            margin-bottom: 20px;
+        }
+
+        .explane-content > figure >img {
+            border-radius: 8px;
+        }
+
+        .explane-content > h3{
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 16px;
+        }
+
+        .explane-content > p {
+            font-size: 15px;
+            color: #555;
+            line-height: 150%;
+        }
+    </style>
+
     <section id="meeting-explane">
         <div class="section-container">
             <div class="explane-content">
                 <figure>
-                    <img src="" alt="">
+                    <img src="imgs/img_seo01.jpg" alt="">
                 </figure>
-                <h3></h3>
-                <p></p>
+                <h3>어떤 모임이라도!
+                </h3>
+                <p>친구, 가족, 동료 등 함께 하고 싶은 사람과
+                    우리만의 공간을 만들어보세요.</p>
+            </div>
+            <div class="explane-content">
+                <figure>
+                    <img src="imgs/img_seo02.jpg" alt="">
+                </figure>
+                <h3>모임에 딱 맞는 기능들</h3>
+                <p>투표로 의견을 모으고, 함께 일정을 공유하며
+                    게시판과 앨범에는 추억을 쌓아보세요.</p>
+            </div>
+            <div class="explane-content">
+                <figure>
+                    <img src="imgs/img_seo03.jpg" alt="">
+                </figure>
+                <h3>내가 원하는 모임 찾기</h3>
+                <p>취미, 스포츠, 또래 모임 등
+                    나와 같은 관심사 밴드를 찾을 수 있어요.</p>
             </div>
         </div>
     </section>
