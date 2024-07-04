@@ -12,6 +12,16 @@
             width: 100%;
         }
 
+        .unit-link {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            /* width: 100%;
+            height: 100%; */
+        }
+
         .logo-spr {
             display: block;
             background: url('imgs/spr_intro.png') no-repeat 0 -98px;
@@ -99,6 +109,7 @@
         #meeting-explane > .section-container {
             display: flex;
             gap: 40px;
+            
         }
 
         .explane-content > figure {
@@ -153,24 +164,271 @@
         </div>
     </section>
 
+    <style>
+
+        #recommand {
+            background-color: #DDD;
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .band-recommand-list {
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 24px;
+        }
+
+        .band-recommand {
+            width: 50%;
+            display: flex;
+            gap: 8px;
+            position: relative;
+            
+        }
+
+        .band-recommand > figure {
+            width: 100px;
+        }
+
+        .band-recommand > figure > img {
+            border-radius: 12px;
+        }
+
+        .band-recommand-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .band-recommand-content > h3 > a {
+            /* font-size: */
+            font-weight: bold;
+            color: #222;
+            text-decoration: none;
+            position: relative;
+            z-index: 10;
+        }
+
+        .band-recommand-content > h3 > a:hover {
+            text-decoration: underline;
+        }
+
+        .band-recommand-content > p {
+            width: 380px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            word-break: break-all;
+            color: #444;
+            font-size: 14px;
+        }
+
+        .band-recommand-content > .meta {
+            color: #666;
+            font-size: 13px;
+        }
+
+        .category-button {
+            display: block;
+            color: #444;
+            text-decoration: none;
+            background-color: white;
+            padding: 8px 16px;
+            width: fit-content;
+            border-radius: 16px;
+            font-size: 14px;
+            position: relative;
+            border: 1px solid transparent;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .category-button::after {
+            content: '';
+            display: block;
+            width: 4px;
+            height: 4px;
+            transform: rotate(45deg);
+            /* background-color: red; */
+            border: 2px solid #bbb;
+            border-left: none;
+            border-bottom: none;
+        }
+
+        .category-button:hover {
+            border: 1px solid gray;
+            /* box-sizing: border-box; */
+        }
+
+        .category {
+            font-weight: bold;
+        }
+    </style>
+
     <section id="recommand">
         <div class="section-container">
             <div class="section-header">
-                <h2></h2>
-                <a href="#"></a>
+                <h2>이런 밴드는 어때요</h2>
+                <a href="#">모두보기</a>
             </div>
             <ul class="band-recommand-list">
                 <li class="band-recommand">
+                    <a href="#" class="unit-link"></a>
+                    <figure>
+                        <img src="imgs/band-thumb1.jpg" alt="">
+                    </figure>
+                    <div class="band-recommand-content">
+                        <h3><a href="#">on문답 (문화유적 답사)</a></h3>
+                        <p>소중한 우리 역사 문화유적, 알고 보면 재미있습니다. 사진으로 어쩌구저쩌구</p>
+                        <p class="meta">
+                            멤버 <span class="member-count">1000</span> · 리더 <span class="leader">홍길동</span>
+                        </p>
+                        <a href="#" class="category-button"><span class="category">문화유적</span> 밴드 더보기</a>
+                    </div> 
+                </li>
+                <li class="band-recommand">
+                    <a href="#" class="unit-link"></a>
+                    <figure>
+                        <img src="imgs/band-thumb1.jpg" alt="">
+                    </figure>
+                    <div class="band-recommand-content">
+                        <h3><a href="#">on문답 (문화유적 답사)</a></h3>
+                        <p>소중한 우리 역사 문화유적, 알고 보면 재미있습니다. 사진으로 어쩌구저쩌구</p>
+                        <p class="meta">
+                            멤버 <span class="member-count">1000</span> · 리더 <span class="leader">홍길동</span>
+                        </p>
+                        <a href="#" class="category-button"><span class="category">문화유적</span> 밴드 더보기</a>
+                    </div> 
+                </li>
+                <li class="band-recommand">
+                    <a href="#" class="unit-link"></a>
+                    <figure>
+                        <img src="imgs/band-thumb1.jpg" alt="">
+                    </figure>
+                    <div class="band-recommand-content">
+                        <h3><a href="#">on문답 (문화유적 답사)</a></h3>
+                        <p>소중한 우리 역사 문화유적, 알고 보면 재미있습니다. 사진으로 어쩌구저쩌구</p>
+                        <p class="meta">
+                            멤버 <span class="member-count">1000</span> · 리더 <span class="leader">홍길동</span>
+                        </p>
+                        <a href="#" class="category-button"><span class="category">문화유적</span> 밴드 더보기</a>
+                    </div> 
+                </li>
+                <li class="band-recommand">
+                    <a href="#" class="unit-link"></a>
+                    <figure>
+                        <img src="imgs/band-thumb1.jpg" alt="">
+                    </figure>
+                    <div class="band-recommand-content">
+                        <h3><a href="#">on문답 (문화유적 답사)</a></h3>
+                        <p>소중한 우리 역사 문화유적, 알고 보면 재미있습니다. 사진으로 어쩌구저쩌구</p>
+                        <p class="meta">
+                            멤버 <span class="member-count">1000</span> · 리더 <span class="leader">홍길동</span>
+                        </p>
+                        <a href="#" class="category-button"><span class="category">문화유적</span> 밴드 더보기</a>
+                    </div> 
+                </li>
+                <li class="band-recommand">
+                    <a href="#" class="unit-link"></a>
+                    <figure>
+                        <img src="imgs/band-thumb1.jpg" alt="">
+                    </figure>
+                    <div class="band-recommand-content">
+                        <h3><a href="#">on문답 (문화유적 답사)</a></h3>
+                        <p>소중한 우리 역사 문화유적, 알고 보면 재미있습니다. 사진으로 어쩌구저쩌구</p>
+                        <p class="meta">
+                            멤버 <span class="member-count">1000</span> · 리더 <span class="leader">홍길동</span>
+                        </p>
+                        <a href="#" class="category-button"><span class="category">문화유적</span> 밴드 더보기</a>
+                    </div> 
+                </li>
+                <li class="band-recommand">
+                    <a href="#" class="unit-link"></a>
+                    <figure>
+                        <img src="imgs/band-thumb1.jpg" alt="">
+                    </figure>
+                    <div class="band-recommand-content">
+                        <h3><a href="#">on문답 (문화유적 답사)</a></h3>
+                        <p>소중한 우리 역사 문화유적, 알고 보면 재미있습니다. 사진으로 어쩌구저쩌구</p>
+                        <p class="meta">
+                            멤버 <span class="member-count">1000</span> · 리더 <span class="leader">홍길동</span>
+                        </p>
+                        <a href="#" class="category-button"><span class="category">문화유적</span> 밴드 더보기</a>
+                    </div> 
+                </li>
+                <li class="band-recommand">
+                    <a href="#" class="unit-link"></a>
+                    <figure>
+                        <img src="imgs/band-thumb1.jpg" alt="">
+                    </figure>
+                    <div class="band-recommand-content">
+                        <h3><a href="#">on문답 (문화유적 답사)</a></h3>
+                        <p>소중한 우리 역사 문화유적, 알고 보면 재미있습니다. 사진으로 어쩌구저쩌구</p>
+                        <p class="meta">
+                            멤버 <span class="member-count">1000</span> · 리더 <span class="leader">홍길동</span>
+                        </p>
+                        <a href="#" class="category-button"><span class="category">문화유적</span> 밴드 더보기</a>
+                    </div> 
+                </li>
+                <li class="band-recommand">
+                    <a href="#" class="unit-link"></a>
+                    <figure>
+                        <img src="imgs/band-thumb1.jpg" alt="">
+                    </figure>
+                    <div class="band-recommand-content">
+                        <h3><a href="#">on문답 (문화유적 답사)</a></h3>
+                        <p>소중한 우리 역사 문화유적, 알고 보면 재미있습니다. 사진으로 어쩌구저쩌구</p>
+                        <p class="meta">
+                            멤버 <span class="member-count">1000</span> · 리더 <span class="leader">홍길동</span>
+                        </p>
+                        <a href="#" class="category-button"><span class="category">문화유적</span> 밴드 더보기</a>
+                    </div> 
+                </li>
+                <li class="band-recommand">
+                    <a href="#" class="unit-link"></a>
+                    <figure>
+                        <img src="imgs/band-thumb1.jpg" alt="">
+                    </figure>
+                    <div class="band-recommand-content">
+                        <h3><a href="#">on문답 (문화유적 답사)</a></h3>
+                        <p>소중한 우리 역사 문화유적, 알고 보면 재미있습니다. 사진으로 어쩌구저쩌구</p>
+                        <p class="meta">
+                            멤버 <span class="member-count">1000</span> · 리더 <span class="leader">홍길동</span>
+                        </p>
+                        <a href="#" class="category-button"><span class="category">문화유적</span> 밴드 더보기</a>
+                    </div> 
+                </li>
+                <li class="band-recommand">
+                    <a href="#" class="unit-link"></a>
+                    <figure>
+                        <img src="imgs/band-thumb1.jpg" alt="">
+                    </figure>
+                    <div class="band-recommand-content">
+                        <h3><a href="#">on문답 (문화유적 답사)</a></h3>
+                        <p>소중한 우리 역사 문화유적, 알고 보면 재미있습니다. 사진으로 어쩌구저쩌구</p>
+                        <p class="meta">
+                            멤버 <span class="member-count">1000</span> · 리더 <span class="leader">홍길동</span>
+                        </p>
+                        <a href="#" class="category-button"><span class="category">문화유적</span> 밴드 더보기</a>
+                    </div> 
+                </li>
+                <!-- <li class="band-recommand">
                     <figure>
                         <img src="" alt="">
                     </figure>
                     <div class="band-recommand-content">
                         <h3><a href="#"></a></h3>
                         <p></p>
-                        <p class="meta"></p>
-                        <a href="#"></a>
+                        <p class="meta">
+                            멤버 <span class="member-count"></span> · 리더 <span class="leader"></span>
+                        </p>
+                        <a href="#"><span class="category">카테고리</span> 밴드 더보기</a>
                     </div> 
-                </li>
+                </li> -->
             </ul>
         </div>
     </section>
